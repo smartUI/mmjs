@@ -1,0 +1,11 @@
+#!/bin/sh
+models=$1
+outputfile=$2
+
+if [ -n "${models}" -a -n "${outputfile}" ]; then
+	curl "http://static.momo.com/??${models}" > "${outputfile}" && echo "package success ${outputfile}"
+else
+	echo "params error"
+fi
+
+#
